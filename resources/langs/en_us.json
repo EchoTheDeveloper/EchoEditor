@@ -1,5 +1,23 @@
 {
   "root": {
-    "title": "EchoEditor"
+    "title": "Echo Editor"
+  },
+  "menus": {
+    "file": {
+      "title": "File",
+      "new": "New",
+      "open": "Open",
+      "save": "Save",
+      "exit": "Exit"
+    },
+    "edit": {
+      "title": "Edit",
+      "preferences": "Preferences"
+    }
+  },
+  "preferences": {
+    "root": {
+      "title": "Preferences"
+    }
   }
 }

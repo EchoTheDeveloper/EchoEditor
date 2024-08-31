@@ -1,5 +1,11 @@
 {
   "root": {
     "title": "testingotherlang"
+  },
+  "file_menu": {
+    "file": "File",
+    "new": "New",
+    "open": "Open",
+    "save": "Save"
   }
 }

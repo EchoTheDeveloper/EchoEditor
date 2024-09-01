@@ -69,9 +69,9 @@ def show_autocomplete():
     current_word = line_text.split()[-1] if line_text.split() else ""
     if not current_word:
         return
-    
+
     suggestions = []
-    
+
     # Add snippets if any match the current word
     if current_word in snippets:
         snippet_preview = snippets[current_word][:8] + "..."
@@ -89,7 +89,7 @@ def show_autocomplete():
         x += text.winfo_rootx()
         y += text.winfo_rooty() + 25
         autocomplete_window.geometry(f"+{x}+{y}")
-        
+
         suggestion_listbox = tk.Listbox(
             autocomplete_window,
             selectmode=tk.SINGLE,
@@ -144,7 +144,7 @@ def accept_autocomplete_or_snippet(event):
     if current_word in snippets:
         word_start = f"{cursor_position} - {len(current_word)}c"
         text.delete(word_start, cursor_position)
-        
+
         # Insert the snippet, handling new lines
         snippet = snippets[current_word]
         snippet_lines = snippet.split("\n")
@@ -157,12 +157,12 @@ def accept_autocomplete_or_snippet(event):
             text.insert(tk.INSERT, f"\n{line}")
         hide_autocomplete()
         return "break"  # Prevent default behavior
-    else: 
+    else:
         insert_autocomplete()
-        hide_autocomplete()    
+        hide_autocomplete()
         return "break"  # Prevent default behavior
-        
-        
+
+
 
 
 text.bind("<Tab>", accept_autocomplete_or_snippet)

@@ -1,3 +1,5 @@
 {
-    "test": "This is a test"
+    "namemain": "if __name__ == \"__main__\":",
+    "tksetup": "import tkinter as tk\nfrom tkinter import *",
+    "pygamesetup": "import pygame as pyg\nfrom pygame import *"
 }
